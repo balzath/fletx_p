@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @usersvehiculo.user %>
+</p>
+
+<p>
+  <strong>Vehiculo:</strong>
+  <%= @usersvehiculo.vehiculo %>
+</p>
+
+<p>
+  <strong>Horas:</strong>
+  <%= @usersvehiculo.horas %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @usersvehiculo.estado %>
+</p>
+
+<%= link_to 'Edit', edit_usersvehiculo_path(@usersvehiculo) %> |
+<%= link_to 'Back', :back %>

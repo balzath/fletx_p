@@ -1,0 +1,24 @@
+<div class="container pt-2">
+    <% @vehiculos.each do |vehiculo| %>
+        <div class="card " style="width: 20rem;">
+            <%= image_tag(vehiculo.foto, style: 'height:200px;width:auto;')%>
+            <div class="card-body">
+                <h5 class="card-title"><%= vehiculo.nombre %></h5>
+                <p class="card-text"><%= vehiculo.descripcion %><br>
+                Valor: <%= vehiculo.valor %> <br>
+                Calificacion: <%= vehiculo.calificacion %></p>
+                 <%= link_to new_vehiculo_usersvehiculo_path(vehiculo), remote: true, data: { toggle: 'modal' }, title: 'Seleccionar Vehìculo' do %>
+                    <button class="btn btn-xs btn-primary">Seleccionar</button>
+                 <% end %>
+
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<div class="modal fade" id="newusersvehiculo">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>

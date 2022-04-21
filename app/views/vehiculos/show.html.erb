@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @vehiculo.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @vehiculo.descripcion %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @vehiculo.modelo %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @vehiculo.valor %>
+</p>
+
+<p>
+  <strong>Calificacion:</strong>
+  <%= @vehiculo.calificacion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @vehiculo.estado %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+ <%= image_tag @vehiculo.foto.url %>
+</p>
+
+<%= link_to 'Edit', edit_vehiculo_path(@vehiculo) %> |
+<%= link_to 'Back', vehiculos_path %>

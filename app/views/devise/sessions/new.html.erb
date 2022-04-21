@@ -1,0 +1,15 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="wrapper">
+      <div class="logo"> <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/5a/d8/dc/5ad8dc1a-53cb-21ff-f40c-beb3251ebbc3/source/60x60bb.jpg" alt=""> </div>
+      <div class="text-center mt-4 name"> Fletx </div>
+      <div class="p-3 mt-3">
+          <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span><%= f.email_field :email,placeholder: 'Email', autofocus: true, autocomplete: "email" %></div>
+          <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span><%= f.password_field :password,placeholder: 'Password', autocomplete: "current-password" %></div> <button class="btn mt-3">Login</button>
+      </div>
+      <div class="text-center fs-6"><%= render "devise/shared/links" %></a> </div>
+  </div>
+
+<% end %>
+
+

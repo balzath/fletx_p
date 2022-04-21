@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vehiculos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Modelo</th>
+      <th>Valor</th>
+      <th>Calificacion</th>
+      <th>Estado</th>
+      <th>Foto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehiculos.each do |vehiculo| %>
+      <tr>
+        <td><%= vehiculo.nombre %></td>
+        <td><%= vehiculo.descripcion %></td>
+        <td><%= vehiculo.modelo %></td>
+        <td><%= vehiculo.valor %></td>
+        <td><%= vehiculo.calificacion %></td>
+        <td><%= vehiculo.estado %></td>
+        <td><%= image_tag(vehiculo.foto, style: 'height:200px;width:auto;')%><td>
+        <td><%= link_to 'Show', vehiculo %></td>
+        <td><%= link_to 'Edit', edit_vehiculo_path(vehiculo) %></td>
+        <td><%= link_to 'Destroy', vehiculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vehiculo', new_vehiculo_path %>

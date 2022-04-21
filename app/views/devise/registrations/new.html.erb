@@ -1,0 +1,21 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="wrapper">
+      <div class="logo"> <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/5a/d8/dc/5ad8dc1a-53cb-21ff-f40c-beb3251ebbc3/source/60x60bb.jpg" alt=""> </div>
+      <div class="p-3 mt-3">
+          <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span><%= f.email_field :email,placeholder: 'Email', autofocus: true %></div>
+          <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span><%= f.text_field  :nombre_completo ,placeholder: 'Nombre Completo', autofocus: true %></div>
+          <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span><%= f.number_field :celular,placeholder: 'Celular', autofocus: true %></div>
+          <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span><%= f.text_field  :direccion,placeholder: 'Direccion', autofocus: true %></div>
+
+          <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <%= f.password_field :password,placeholder: 'Contraseña', autocomplete: "password" %></div>
+          <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <%= f.password_field :password_confirmation,placeholder: 'Confirma Contraseña', autocomplete: "new-password" %></div>
+           <%= f.submit "Registrarse",class: 'btn mt-3' %>
+           
+      </div>
+      <div class="text-center fs-6"><%= render "devise/shared/links" %></div>
+  </div>
+
+<% end %>
